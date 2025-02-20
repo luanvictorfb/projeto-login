@@ -16,6 +16,7 @@
 body,html{
     background-color: #C9D3DC;
     height: 100vh;
+    
 }
 main{
     display: flex;
@@ -23,7 +24,8 @@ main{
     justify-content: center;
     height: 100vh;
 }
-section#login{
+section{
+    position: relative;
     background-color: white;
     display: flex;
     flex-flow: column nowrap;
@@ -41,7 +43,7 @@ section#login{
     background-repeat: no-repeat;
     background-position: center;
 }
-section#login div#formulario{
+section div#formulario{
     padding: 10px;
     display: flex;
     flex-flow: column nowrap;
@@ -75,16 +77,16 @@ form .campo input{
     height: 100%;
     border: none;
     padding: 10px;
+    
 }
 .campo input:focus-within{
-    background-color: aliceblue;
-    
+    background-color: white;
 }
 
 div.campo label{
     display: none;
 }
-form input[type=submit]{
+form input[type=submit],input{
     display: block;
     font-size: 1em;
     width: 100%;
@@ -93,34 +95,25 @@ form input[type=submit]{
     color: white;
     border: none;
     cursor: pointer;
+    margin-bottom: 5px;
+    
 } 
-form input[type=submit]:hover{
+form input[type=submit]:hover,input:hover{
     background-color: #C9D3DC;
     color: #59646D;
 }
-a#botao{
-    display: block;
-    font-size: 1em;
-    width: 100%;
-    height: 30px;
-    background-color: #59646D;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 5px;
-}
-a#botao:hover{
-    background-color: #C9D3DC;
-    color: #59646D;
+
+div#register{
+    display: none;
+    transition: ease-in-out 0.8s;
+    transform-style: preserve-3d;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px){
     body{
         background-image:linear-gradient(to top,#2F3F4A,#C9D3DC ) ;
     }
-    section#login{
+    section{
         width: 90vw;
         height: 350px;
         display: flex;
@@ -131,7 +124,7 @@ a#botao:hover{
         height: 100%;
         background-position: center center;
     }
-    section#login div#formulario{
+    section div#formulario{
         width: 60%;
         gap: 20px;
         
@@ -149,7 +142,7 @@ a#botao:hover{
         background-image:linear-gradient(to top,#2F3F4A,#C9D3DC ) ;
     }
 
-    section#login{
+    section{
         width: 992px;
         height: 400px;
         display: flex;
@@ -161,7 +154,7 @@ a#botao:hover{
         height: 100%;
     }
 
-    section#login div#formulario{
+    section div#formulario{
         width: 50%;
         gap: 25px;
     }
